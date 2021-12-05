@@ -7,7 +7,7 @@
 |=  *
 :-  %noun
 
-:: Part 1 Solution:
+:: Part 1 Solution
 :: %.  puzzle-input
 :: |=  ilis=wain  ^-  @ud
 :: =/  ffst=bean  %.y
@@ -16,14 +16,14 @@
 :: |-  ^-  @ud
 :: ?~  ilis
 ::   fcnt
-:: =+  fcur=(scan (trip i.ilis) dim:ag)
+:: =+  fcur=(rash i.ilis dim:ag)
 :: ?:  ffst
 ::   $(ilis t.ilis, ffst %.n, fcnt fcnt, fprv fcur)
 :: ?:  (gth fcur fprv)
 ::   $(ilis t.ilis, fcnt +(fcnt), fprv fcur)
 :: $(ilis t.ilis, fprv fcur)
 
-:: Part 2 Solution:
+:: Part 2 Solution
 %.  puzzle-input
 |=  ilis=wain  ^-  @ud
 =/  fitr=@ud  0
@@ -33,7 +33,7 @@
 |-  ^-  @ud
 ?~  ilis
   fcnt
-=+  inxt=(scan (trip i.ilis) dim:ag)
+=+  inxt=(rash i.ilis dim:ag)
 =+  fcur=(add fprv inxt)
 =.  fqeu  [inxt fqeu]
 ?:  (lth fitr 3)
