@@ -1,3 +1,5 @@
 ./.gitignore
 ./.syncignore
+./.sync.sh
+./.tmux.sh
 ./readme.md
