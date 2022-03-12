@@ -45,7 +45,7 @@ tmux new-session -d -s $session_name -x "$stty_x" -y "$(($stty_y - 1))"
 tmux select-window -t $session_name:0
 tmux split-window -v -l 20
 tmux select-pane -t 1
-tmux send-keys "cd $(readlink -f ./cur); cd ..; ../bin/v1.8/urbit ./" C-m
+tmux send-keys "cd $(readlink -f ./cur); cd ..; ../bin/v1.8/urbit -L ./" C-m
 tmux select-pane -t 0
 tmux send-keys "vim ./" C-m
 
