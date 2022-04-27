@@ -1,3 +1,4 @@
+/-  poke
 /+  default-agent, dbug
 |%
 +$  versioned-state
@@ -35,26 +36,26 @@
   ^-  (quip card _this)
   ?+    mark  (on-poke:def mark vase)
       %noun
-    =/  action  !<(?(%inc %dec %mul %rst) vase)
+    =/  action  !<(?([%inc @p] [%dec @p] [%mul @p] [%rst @p]) vase)
     :_  this
-    ?-    action
+    ?-    -.action
         %inc
-      :~  [%pass /inc %agent [our.bowl %pokeme] %poke %noun !>(%inc)]
-          [%pass /inc %agent [our.bowl %pokeme] %poke %noun !>(%inc)]
+      :~  [%pass /inc %agent [+.action %pokeme] %poke %poke-action !>(%inc)]
+          [%pass /inc %agent [+.action %pokeme] %poke %poke-action !>(%inc)]
       ==
     ::
         %dec
-      :~  [%pass /dec %agent [our.bowl %pokeme] %poke %noun !>(%dec)]
-          [%pass /dec %agent [our.bowl %pokeme] %poke %noun !>(%dec)]
+      :~  [%pass /dec %agent [+.action %pokeme] %poke %poke-action !>(%dec)]
+          [%pass /dec %agent [+.action %pokeme] %poke %poke-action !>(%dec)]
       ==
     ::
         %mul
-      :~  [%pass /mul %agent [our.bowl %pokeme] %poke %noun !>(%mul)]
-          [%pass /mul %agent [our.bowl %pokeme] %poke %noun !>(%mul)]
+      :~  [%pass /mul %agent [+.action %pokeme] %poke %poke-action !>(%mul)]
+          [%pass /mul %agent [+.action %pokeme] %poke %poke-action !>(%mul)]
       ==
     ::
         %rst
-      :~  [%pass /rst %agent [our.bowl %pokeme] %poke %noun !>(%rst)]
+      :~  [%pass /rst %agent [+.action %pokeme] %poke %poke-action !>(%rst)]
       ==
     ==
   ==
