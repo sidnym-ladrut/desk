@@ -2,4 +2,5 @@
 ./.syncignore
 ./.sync.sh
 ./.tmux.sh
+./.dump.sh
 ./readme.md
