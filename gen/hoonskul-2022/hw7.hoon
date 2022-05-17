@@ -3,7 +3,7 @@
 :: solutions to %hw7 (hoon school 2022-2 cohort)
 ::
 :: question 1: tape of hex color value to hex value
-:: :: verbose solution:
+:: verbose solution:
 :: :: |=  t=tape
 :: :: ^-  @ux
 :: :: :: verify structure of tape
@@ -29,7 +29,7 @@
 :: |=  t=tape
 :: ^-  @ux
 :: ?>  &(=((snag 0 t) '#') =((lent t) 7))
-:: =<  +>:.
+:: =<  +>
 :: %-  de:base16:mimes:html
 :: (crip (slag 1 t))
 :: question 2: rewriting the `+sub` arm
@@ -59,10 +59,10 @@
 :: (curr gth 10)
 :: question 6: floating point reel/roll
 :: cool (not working) answer:
-:: (curr roll add:rs)
+:: (curr (bake roll ,[(list @rs) _=>(~ |=([@rs @rs] @rs))]) add:rs)
 :: boring (working) answer:
-:: |=  l=(list @rs)
-:: ^-  @rs
-:: (roll l add:rs)
+|=  l=(list @rs)
+^-  @rs
+(roll l add:rs)
 :: question 7: implement factorial w/ ;:
 :: :(mul 1 2 3 4 5)
