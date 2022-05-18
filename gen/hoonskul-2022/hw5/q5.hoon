@@ -1,7 +1,10 @@
 :: hw5/q5.hoon
 :: solutions to %hw5 q5 (hoon school 2022-2 cohort)
-|=  [a=@ud b=@ud]
-=<  [(~(add . a) b) (~(sub . a) b) (~(mul . a) b) (~(div . a) b)]
+:: test implementation:
+:: |=  [a=@ud b=@ud]
+:: =<  [(~(add . a) b) (~(sub . a) b) (~(mul . a) b) (~(div . a) b)]
+:: raw implementation (needed for %hw9 q2 to work):
+|=  *
 |_  v=@ud
 ++  add
   |=  i=@ud

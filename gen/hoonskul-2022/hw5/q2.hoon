@@ -6,6 +6,7 @@
 ++  primes
   |=  n=@ud
   ^-  (list @ud)
+  ?>  (gth n 1)
   =/  l=(list @ud)  ~
   =/  k=@ud         1
   |-
