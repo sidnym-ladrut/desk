@@ -1,0 +1,8 @@
+- /cur
+- /.git/
+- /.gitignore
+- /.rsync-filter
+- /.sync.sh
+- /.tmux.sh
+- /.dump.sh
+- /readme.md

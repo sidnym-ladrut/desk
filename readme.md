@@ -14,11 +14,17 @@ is performed.
 
 ### Manual Sync Instructions ###
 
-- All Contents:
-  ```
-  rsync -uLrvP --filter="- .*" ./ ./cur/
-  ```
-- Single File/Pattern:
-  ```
-  rsync -uLrvPm --filter="+ file.hoon" --filter="+ */" --filter="- *" ./ ./cur/
-  ```
+These commands will upload one or more files to the desk pointed to by the symbolic
+link `cur`:
+
+#### Entire Desk ####
+
+```shell
+./.sync.sh upload .
+```
+
+#### Single File ####
+
+```shell
+./.sync.sh upload path/to file.hoon
+```
